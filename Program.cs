@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,13 +11,21 @@ namespace Anagram_Finder
     class Program
     {
         static readonly HashSet<AnagrammizedWord> Words = new HashSet<AnagrammizedWord>();
+
         static void Main(string[] args)
-        {  
+        {
             ReadFromFile();
             var orderedByAnagram = Words.OrderBy(aw => aw.Anagram).ToArray();
+            string currentAnagram = String.Empty;
             foreach (var word in orderedByAnagram)
             {
-                Console.WriteLine($"Annagram: {word.Anagram} - Word: {word.Word}");
+                if (word.Anagram != currentAnagram)
+                {
+                    currentAnagram = word.Anagram;
+                    Console.WriteLine("__________________________________");
+                }
+
+                Console.WriteLine(word.Word);
             }
 
             Console.ReadLine();
@@ -26,7 +35,8 @@ namespace Anagram_Finder
         private static void ReadFromFile()
         {
             var reader =
-                new StreamReader(@"C:\Users\SchwartzPC\source\repos\Anagram Finder\Anagram Finder\Resources\wordsFile.txt");
+                new StreamReader(
+                    @"C:\Users\SchwartzPC\source\repos\Anagram Finder\Anagram Finder\Resources\wordsFile.txt");
             string line;
             while ((line = reader.ReadLine()) != null)
             {
@@ -39,6 +49,7 @@ namespace Anagram_Finder
     {
         public string Word { get; set; }
         public string Anagram { get; set; }
+
         public AnagrammizedWord(string word)
         {
             this.Word = word;
