@@ -1,0 +1,7 @@
+C:\Users\SchwartzPC\source\repos\Anagram Finder\Anagram Finder\bin\Debug\Anagram Finder.exe.config
+C:\Users\SchwartzPC\source\repos\Anagram Finder\Anagram Finder\bin\Debug\Anagram Finder.exe
+C:\Users\SchwartzPC\source\repos\Anagram Finder\Anagram Finder\bin\Debug\Anagram Finder.pdb
+C:\Users\SchwartzPC\source\repos\Anagram Finder\Anagram Finder\obj\Debug\Anagram Finder.csprojResolveAssemblyReference.cache
+C:\Users\SchwartzPC\source\repos\Anagram Finder\Anagram Finder\obj\Debug\Anagram Finder.csproj.CoreCompileInputs.cache
+C:\Users\SchwartzPC\source\repos\Anagram Finder\Anagram Finder\obj\Debug\Anagram Finder.exe
+C:\Users\SchwartzPC\source\repos\Anagram Finder\Anagram Finder\obj\Debug\Anagram Finder.pdb
